@@ -15,7 +15,34 @@ public class CustomerTest extends BaseTest{
         CustomerPage addCustomer = new CustomerPage(driver);
         addCustomer.buttonTransactions();
         addCustomer.clickBackButton();
+        textExists("Transaction");
 
+    }
+
+    @Test
+    public void testDeposit(){
+        logger.info("####Test Case: Deposit");
+        LoginPage login = new LoginPage(driver);
+        login.customerLogin();
+        CustomerPage addCustomer = new CustomerPage(driver);
+        addCustomer.clickDepositButton();
+        addCustomer.enterAmount();
+        addCustomer.clickDeposit();
+        textExists("Deposit");
+
+    }
+
+    @Test
+    public void testWithdraw(){
+        logger.info("####Test Case: Withdraw");
+        LoginPage login = new LoginPage(driver);
+        login.customerLogin();
+        CustomerPage addCustomer = new CustomerPage(driver);
+        addCustomer.clickWithdrawButton();
+        addCustomer.enterWithdrawAmount();
+        addCustomer.clickWithdraw();
+        addCustomer.clickLogout();
+        textExists("Withdraw");
 
     }
 }

@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods,   9 passed</span>
+                    <span class="method-stats">12 methods,   12 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -114,6 +114,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="test.ManagerTest" class="method navigator-link" hash-for-method="testClickCustomers">testClickCustomers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_Suite" title="test.ManagerTest" class="method navigator-link" hash-for-method="testCustomerInfo">testCustomerInfo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -125,6 +130,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_Suite" title="test.LoginTest" class="method navigator-link" hash-for-method="testCustomerLogout">testCustomerLogout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="test.CustomerTest" class="method navigator-link" hash-for-method="testDeposit">testDeposit</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -147,6 +157,11 @@
                         <a href="#" panel-name="suite-Default_Suite" title="test.CustomerTest" class="method navigator-link" hash-for-method="testTransaction">testTransaction</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="test.CustomerTest" class="method navigator-link" hash-for-method="testWithdraw">testWithdraw</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-Default_Suite -->
                   </li>
                 </ul>
@@ -159,6 +174,35 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_Suite" class="panel Default_Suite">
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test.CustomerTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeposit">
+                  </a> <!-- testDeposit -->
+                  <span class="method-name">testDeposit</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testTransaction">
+                  </a> <!-- testTransaction -->
+                  <span class="method-name">testTransaction</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWithdraw">
+                  </a> <!-- testWithdraw -->
+                  <span class="method-name">testWithdraw</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
           <div class="suite-Default_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -177,6 +221,13 @@
                   <a name="testAddCustomer">
                   </a> <!-- testAddCustomer -->
                   <span class="method-name">testAddCustomer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testClickCustomers">
+                  </a> <!-- testClickCustomers -->
+                  <span class="method-name">testClickCustomers</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -231,21 +282,6 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_Suite-class-passed -->
-          <div class="suite-Default_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.CustomerTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testTransaction">
-                  </a> <!-- testTransaction -->
-                  <span class="method-name">testTransaction</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_Suite-class-passed -->
         </div> <!-- panel Default_Suite -->
         <div panel-name="test-xml-Default_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -258,9 +294,9 @@
 &lt;suite name=&quot;Default Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;PomBasics&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.CustomerTest&quot;/&gt;
-      &lt;class name=&quot;test.ManagerTest&quot;/&gt;
       &lt;class name=&quot;test.LoginTest&quot;/&gt;
+      &lt;class name=&quot;test.ManagerTest&quot;/&gt;
+      &lt;class name=&quot;test.CustomerTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- PomBasics --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
@@ -300,48 +336,60 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(9);
+data.addRows(12);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testManagerLogin')
-data.setCell(0, 2, 'test.LoginTest')
-data.setCell(0, 3, 7167);
+data.setCell(0, 1, 'testWithdraw')
+data.setCell(0, 2, 'test.CustomerTest')
+data.setCell(0, 3, 6280);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testCustomerLogout')
-data.setCell(1, 2, 'test.LoginTest')
-data.setCell(1, 3, 5860);
+data.setCell(1, 1, 'testDeposit')
+data.setCell(1, 2, 'test.CustomerTest')
+data.setCell(1, 3, 6150);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testHomeButton')
-data.setCell(2, 2, 'test.LoginTest')
-data.setCell(2, 3, 5782);
+data.setCell(2, 1, 'testTransaction')
+data.setCell(2, 2, 'test.CustomerTest')
+data.setCell(2, 3, 6125);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testCustomerLogin')
+data.setCell(3, 1, 'testCustomerLogout')
 data.setCell(3, 2, 'test.LoginTest')
-data.setCell(3, 3, 5757);
+data.setCell(3, 3, 6068);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testAddCustomer')
-data.setCell(4, 2, 'test.ManagerTest')
-data.setCell(4, 3, 5613);
+data.setCell(4, 1, 'testHomeButton')
+data.setCell(4, 2, 'test.LoginTest')
+data.setCell(4, 3, 5970);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testTransaction')
-data.setCell(5, 2, 'test.CustomerTest')
-data.setCell(5, 3, 958);
+data.setCell(5, 1, 'testClickCustomers')
+data.setCell(5, 2, 'test.ManagerTest')
+data.setCell(5, 3, 5917);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testAccountInfo')
-data.setCell(6, 2, 'test.ManagerTest')
-data.setCell(6, 3, 836);
+data.setCell(6, 1, 'testCustomerLogin')
+data.setCell(6, 2, 'test.LoginTest')
+data.setCell(6, 3, 5870);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testCustomerInfo')
+data.setCell(7, 1, 'testAddCustomer')
 data.setCell(7, 2, 'test.ManagerTest')
-data.setCell(7, 3, 382);
+data.setCell(7, 3, 5667);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testLoginPageTitle')
+data.setCell(8, 1, 'testManagerLogin')
 data.setCell(8, 2, 'test.LoginTest')
-data.setCell(8, 3, 162);
+data.setCell(8, 3, 5509);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testAccountInfo')
+data.setCell(9, 2, 'test.ManagerTest')
+data.setCell(9, 3, 806);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testCustomerInfo')
+data.setCell(10, 2, 'test.ManagerTest')
+data.setCell(10, 3, 332);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testLoginPageTitle')
+data.setCell(11, 2, 'test.LoginTest')
+data.setCell(11, 3, 222);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 54 seconds</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -367,120 +415,156 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.CustomerTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testTransaction</span>
-                <span class="method-start">2137 ms</span>
+                <span class="method-name">testCustomerLogin</span>
+                <span class="method-start">2220 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">3097 ms</span>
+                <span class="method-start">8091 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">8305 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCustomerLogout</span>
+                <span class="method-start">9993 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">16061 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">16450 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testHomeButton</span>
+                <span class="method-start">18721 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">24691 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">24988 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLoginPageTitle</span>
+                <span class="method-start">27011 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">27233 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">27495 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testManagerLogin</span>
+                <span class="method-start">29333 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">34842 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.ManagerTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">3318 ms</span>
+                <span class="method-start">35041 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAccountInfo</span>
-                <span class="method-start">5101 ms</span>
+                <span class="method-start">36639 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">5937 ms</span>
+                <span class="method-start">37445 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">6135 ms</span>
+                <span class="method-start">37672 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAddCustomer</span>
-                <span class="method-start">7757 ms</span>
+                <span class="method-start">39061 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">13370 ms</span>
+                <span class="method-start">44728 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">13613 ms</span>
+                <span class="method-start">44955 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testClickCustomers</span>
+                <span class="method-start">46644 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">52562 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">52856 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testCustomerInfo</span>
-                <span class="method-start">15373 ms</span>
+                <span class="method-start">54699 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">15755 ms</span>
+                <span class="method-start">55032 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">test.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.CustomerTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">15965 ms</span>
+                <span class="method-start">55289 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testCustomerLogin</span>
-                <span class="method-start">17540 ms</span>
+                <span class="method-name">testDeposit</span>
+                <span class="method-start">57157 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">23298 ms</span>
+                <span class="method-start">63308 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">23532 ms</span>
+                <span class="method-start">63572 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testCustomerLogout</span>
-                <span class="method-start">25173 ms</span>
+                <span class="method-name">testTransaction</span>
+                <span class="method-start">65282 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">31033 ms</span>
+                <span class="method-start">71408 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">31265 ms</span>
+                <span class="method-start">71672 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testHomeButton</span>
-                <span class="method-start">32857 ms</span>
+                <span class="method-name">testWithdraw</span>
+                <span class="method-start">73506 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">38639 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">38862 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testLoginPageTitle</span>
-                <span class="method-start">40456 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">40619 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">40798 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testManagerLogin</span>
-                <span class="method-start">42549 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">49716 ms</span>
+                <span class="method-start">79787 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

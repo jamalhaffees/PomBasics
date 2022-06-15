@@ -10,6 +10,20 @@ public class CustomerPage extends BasePage{
 
     By backButton = By.xpath("//button[text()='Back']");
 
+    By depositButton = By.xpath("//button[contains(text(),'Deposit')]");
+
+    By addAmount = By.cssSelector("[type = 'number']");
+
+    By buttonDeposit = By.xpath("//button[text() = 'Deposit']");
+
+    By withdrawButton = By.xpath("//button[contains(text(),'Withdraw')]");
+
+    By addWAmount = By.cssSelector("[type = 'number']");
+
+    By buttonWithdraw = By.xpath("//button[text() = 'Withdraw']");
+
+    By logoutButton = By.xpath("//button[text()='Logout']");
+
 
     public CustomerPage(WebDriver driver) {
         this.driver = driver;
@@ -17,6 +31,34 @@ public class CustomerPage extends BasePage{
 
     public void buttonTransactions(){
         driver.findElement(transactionsButton).click();
+    }
+
+    public void clickDepositButton(){
+        driver.findElement(depositButton).click();
+    }
+
+    public void enterAmount(){
+        driver.findElement(addAmount).sendKeys("1000");
+    }
+
+    public void clickDeposit(){
+        driver.findElement(buttonDeposit).click();
+    }
+
+    public void clickWithdrawButton(){
+        driver.findElement(withdrawButton).click();
+    }
+
+    public void enterWithdrawAmount(){
+        driver.findElement(addWAmount).sendKeys("500");
+    }
+
+    public void clickWithdraw(){
+        driver.findElement(buttonWithdraw).click();
+    }
+
+    public void clickLogout(){
+        driver.findElement(logoutButton).click();
     }
 
     public void clickBackButton(){

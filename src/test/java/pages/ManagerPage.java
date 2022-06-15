@@ -20,6 +20,12 @@ public class ManagerPage extends BasePage {
 
     By clickProcess = By.xpath("//button[text()='Process']");
 
+    By clickCustomers = By.xpath("//button[contains(text(),'Customers')]");
+
+    By enterSearch = By.cssSelector("[type = 'text']");
+
+    By buttonDelete = By.xpath("//button[text()='Delete']");
+
 
     public ManagerPage(WebDriver driver) {
         this.driver = driver;
@@ -48,6 +54,13 @@ public class ManagerPage extends BasePage {
         Select select = new Select(driver.findElement(pickCurrency));
         select.selectByVisibleText("Dollar");
         driver.findElement(clickProcess).click();
+
+    }
+
+    public void chooseCustomers(){
+        driver.findElement(clickCustomers).click();
+        driver.findElement(enterSearch).sendKeys("Hermoine");
+        driver.findElement(buttonDelete).click();
 
     }
 }

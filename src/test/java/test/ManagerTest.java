@@ -27,13 +27,21 @@ public class ManagerTest extends BaseTest{
 
     @Test
     public  void testAccountInfo(){
-        logger.info("###### Test Case: Customer Form");
+        logger.info("###### Test Case: Open Account");
         LoginPage login = new LoginPage(driver);
         login.managerLogin();
         ManagerPage addCustomer = new ManagerPage(driver);
         addCustomer.customerAccount();
         addCustomer.selectCurrency();
+    }
 
-
+    @Test
+    public void testClickCustomers(){
+        logger.info("###### Test Case: Customer Form");
+        LoginPage login = new LoginPage(driver);
+        login.managerLogin();
+        ManagerPage addCustomer = new ManagerPage(driver);
+        addCustomer.chooseCustomers();
+        textExists("Customers");
     }
 }
